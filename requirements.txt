@@ -1,0 +1,14 @@
+# PyTorch 2.1 with CUDA 11.8 (install from https://pytorch.org first)
+torch==2.1.2
+torchvision==0.16.2
+gsplat==1.5.3
+transformers==4.51.3
+segment-anything @ git+https://github.com/facebookresearch/segment-anything.git
+numpy==1.26.4
+scipy==1.15.3
+pandas==2.3.3
+opencv-python==4.10.0.84
+pillow
+pyyaml
+matplotlib
+imageio

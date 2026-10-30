@@ -1,0 +1,14 @@
+bookshelf
+coffee table
+door
+lamp
+piano
+piano bench
+plant
+radiator
+screen
+side table
+sofa
+speaker
+television
+window

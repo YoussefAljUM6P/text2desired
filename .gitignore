@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pt
+*.ply
+*.npz
+*.mp4
+out/**/*.png
+out/**/*.jpg
+paper_mva/tables/*.tex
+paper_mva/figures/*.pdf

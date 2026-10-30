@@ -1,0 +1,209 @@
+scene,frame,query,detected,loc,iou
+figurines,frame_00041,old camera,True,1,0.1777332799359231
+figurines,frame_00041,toy elephant,True,1,0.6666273862832901
+figurines,frame_00041,waldo,True,1,0.5793535938253739
+figurines,frame_00041,tesla door handle,True,1,0.30817894261183915
+figurines,frame_00041,porcelain hand,True,1,0.5747627596819698
+figurines,frame_00041,rubber duck with hat,True,1,0.5294311624072547
+figurines,frame_00041,rubber duck with buoy,True,1,0.48815980949861093
+figurines,frame_00041,pink ice cream,True,1,0.5080180921052632
+figurines,frame_00041,red toy chair,True,1,0.5597083653108211
+figurines,frame_00041,green apple,True,1,0.06562774363476734
+figurines,frame_00041,pikachu,True,1,0.2426774780738044
+figurines,frame_00041,red apple,True,1,0.08510906569158996
+figurines,frame_00041,spatula,True,1,0.8973671764149456
+figurines,frame_00041,jake,True,0,0.32857142857142857
+figurines,frame_00041,toy cat statue,True,1,0.2168284789644013
+figurines,frame_00041,pirate hat,False,0,0.0
+figurines,frame_00041,miffy,True,0,0.0
+figurines,frame_00105,rubics cube,True,1,0.12575198913254415
+figurines,frame_00105,green apple,True,1,0.1282367447595561
+figurines,frame_00105,green toy chair,True,1,0.4311131811830461
+figurines,frame_00105,jake,True,0,0.24523339907955294
+figurines,frame_00105,old camera,True,1,0.06828054869585594
+figurines,frame_00105,pink ice cream,True,1,0.26509023024268824
+figurines,frame_00105,pumpkin,True,1,0.7388239366807761
+figurines,frame_00105,red apple,True,1,0.5235142857142857
+figurines,frame_00105,rubber duck with hat,True,1,0.5122061482820977
+figurines,frame_00105,tesla door handle,True,0,0.043577421194102794
+figurines,frame_00105,spatula,True,1,0.7874943362029905
+figurines,frame_00105,rubber duck with buoy,True,1,0.1758316361167685
+figurines,frame_00105,pirate hat,False,0,0.0
+figurines,frame_00152,rubber duck with hat,True,1,0.8277244563236544
+figurines,frame_00152,rubics cube,True,1,0.6780623668832942
+figurines,frame_00152,toy elephant,True,1,0.8795009250913232
+figurines,frame_00152,green apple,True,1,0.15296518879691576
+figurines,frame_00152,jake,True,1,0.5069643732064114
+figurines,frame_00152,toy cat statue,True,0,0.29342735640846207
+figurines,frame_00152,pikachu,True,1,0.21395301223319854
+figurines,frame_00152,porcelain hand,True,1,0.7406239046617595
+figurines,frame_00152,red apple,True,1,0.13600264725347452
+figurines,frame_00152,waldo,True,1,0.739833493435799
+figurines,frame_00152,pirate hat,False,0,0.0
+figurines,frame_00195,toy elephant,True,1,0.39092996555683124
+figurines,frame_00195,pink ice cream,True,1,0.20485658409387222
+figurines,frame_00195,porcelain hand,True,1,0.6108891108891109
+figurines,frame_00195,green apple,True,1,0.06454398273070697
+figurines,frame_00195,green toy chair,True,1,0.7537156304186277
+figurines,frame_00195,old camera,True,1,0.0875904860392968
+figurines,frame_00195,rubics cube,True,1,0.021425628347754428
+figurines,frame_00195,spatula,True,1,0.7861917808219178
+figurines,frame_00195,toy cat statue,True,1,0.3519847972972973
+figurines,frame_00195,waldo,True,1,0.6074736505908656
+figurines,frame_00195,rubber duck with buoy,True,1,0.39740566037735847
+figurines,frame_00195,pirate hat,False,0,0.0
+figurines,frame_00195,miffy,True,0,0.0
+figurines,frame_00195,bag,True,0,0.06252457727093984
+figurines,frame_00195,rubber duck with hat,True,1,0.36526410026857653
+teatime,frame_00002,stuffed bear,True,1,0.46380681182961875
+teatime,frame_00002,coffee mug,True,1,0.6411499826809837
+teatime,frame_00002,bag of cookies,True,1,0.8782489740082079
+teatime,frame_00002,sheep,True,1,0.08772809147153261
+teatime,frame_00002,apple,True,1,0.803399433427762
+teatime,frame_00002,paper napkin,True,0,0.0
+teatime,frame_00002,plate,True,1,0.5755659800122374
+teatime,frame_00002,tea in a glass,True,1,0.559612846458425
+teatime,frame_00002,bear nose,True,0,0.0037983628761557035
+teatime,frame_00002,three cookies,True,1,0.6890207715133532
+teatime,frame_00002,coffee,True,1,0.741015741015741
+teatime,frame_00025,stuffed bear,True,1,0.3212818709987788
+teatime,frame_00025,sheep,True,1,0.6899436963992855
+teatime,frame_00025,bag of cookies,True,1,0.4888473665771342
+teatime,frame_00025,tea in a glass,True,1,0.5
+teatime,frame_00025,coffee mug,True,1,0.5503584841242745
+teatime,frame_00025,plate,True,1,0.607209913631243
+teatime,frame_00025,three cookies,True,1,0.5216095380029806
+teatime,frame_00025,hooves,True,0,0.0
+teatime,frame_00025,paper napkin,True,0,0.0
+teatime,frame_00025,coffee,True,1,0.6375137513751375
+teatime,frame_00025,bear nose,True,0,0.01082529920212766
+teatime,frame_00043,tea in a glass,True,1,0.4374968253161985
+teatime,frame_00043,hooves,True,0,0.0
+teatime,frame_00043,stuffed bear,True,1,0.03995377896159345
+teatime,frame_00043,bag of cookies,True,1,0.5325305350077413
+teatime,frame_00043,paper napkin,True,0,0.0
+teatime,frame_00043,plate,True,1,0.6182080684121387
+teatime,frame_00043,apple,True,1,0.6244541484716157
+teatime,frame_00043,coffee mug,True,1,0.39294002687187
+teatime,frame_00043,coffee,True,1,0.4823682628731717
+teatime,frame_00043,three cookies,True,1,0.4145735578250069
+teatime,frame_00107,stuffed bear,True,1,0.8418676867405009
+teatime,frame_00107,sheep,True,1,0.139429227917178
+teatime,frame_00107,apple,True,1,0.7317351598173516
+teatime,frame_00107,bag of cookies,True,1,0.9073594195387406
+teatime,frame_00107,coffee mug,True,1,0.3993115318416523
+teatime,frame_00107,tea in a glass,True,1,0.6285300506879073
+teatime,frame_00107,bear nose,True,0,0.002180521620546622
+teatime,frame_00107,plate,True,1,0.5909211574196974
+teatime,frame_00107,three cookies,True,1,0.6082013804303694
+teatime,frame_00107,dall-e brand,True,1,0.1680404916847433
+teatime,frame_00107,paper napkin,True,0,0.0
+teatime,frame_00129,tea in a glass,True,1,0.5741596505665633
+teatime,frame_00129,apple,True,1,0.8532399780340473
+teatime,frame_00129,yellow pouf,True,1,0.7070165578660672
+teatime,frame_00129,sheep,True,1,0.08679082357043814
+teatime,frame_00129,three cookies,True,1,0.8873558484349259
+teatime,frame_00129,plate,True,1,0.5199322563835331
+teatime,frame_00129,dall-e brand,True,1,0.13906703211900265
+teatime,frame_00140,tea in a glass,True,1,0.4992122199375117
+teatime,frame_00140,paper napkin,True,0,0.0
+teatime,frame_00140,apple,True,1,0.8789826336660741
+teatime,frame_00140,stuffed bear,True,1,0.14371106776568301
+teatime,frame_00140,bag of cookies,True,1,0.8986121819583655
+teatime,frame_00140,plate,True,1,0.6179875333926982
+teatime,frame_00140,coffee mug,True,1,0.6014071999453514
+teatime,frame_00140,coffee,True,1,0.6736860943745153
+teatime,frame_00140,three cookies,True,1,0.6401065137238836
+ramen,frame_00006,chopsticks,True,1,0.7299412915851272
+ramen,frame_00006,egg,True,1,0.8504132231404958
+ramen,frame_00006,nori,True,1,0.5160068194733851
+ramen,frame_00006,bowl,True,1,0.4174736065775277
+ramen,frame_00006,napkin,True,0,0.0
+ramen,frame_00006,sake cup,True,0,0.0
+ramen,frame_00006,wavy noodles,True,1,0.7320887991927346
+ramen,frame_00006,kamaboko,True,1,0.5485743123896039
+ramen,frame_00006,plate,True,1,0.5985367004956337
+ramen,frame_00006,onion segments,True,0,0.006593064842170735
+ramen,frame_00024,bowl,True,1,0.704752359943115
+ramen,frame_00024,chopsticks,True,1,0.7988284384528969
+ramen,frame_00024,egg,True,1,0.8790842799046417
+ramen,frame_00024,nori,True,1,0.7319768759918386
+ramen,frame_00024,wavy noodles,True,1,0.8618249534450652
+ramen,frame_00024,kamaboko,True,1,0.7152641258164754
+ramen,frame_00024,onion segments,True,0,0.002760672524735349
+ramen,frame_00024,corn,True,0,0.030264474867253633
+ramen,frame_00060,chopsticks,True,1,0.7682962529274004
+ramen,frame_00060,egg,True,1,0.89019688269073
+ramen,frame_00060,sake cup,True,0,0.0
+ramen,frame_00060,napkin,True,1,0.24004819277108433
+ramen,frame_00060,wavy noodles,True,1,0.8644902689911624
+ramen,frame_00060,kamaboko,True,1,0.7684486994831823
+ramen,frame_00060,corn,True,0,0.030670001316309068
+ramen,frame_00060,onion segments,True,0,0.0021032906938947206
+ramen,frame_00065,bowl,True,1,0.6182909420554126
+ramen,frame_00065,egg,True,1,0.8549945513984744
+ramen,frame_00065,chopsticks,True,1,0.6727960130606634
+ramen,frame_00065,sake cup,True,0,0.0
+ramen,frame_00065,wavy noodles,True,1,0.758995962787432
+ramen,frame_00065,nori,True,1,0.4498333597841612
+ramen,frame_00065,napkin,True,0,0.0
+ramen,frame_00065,kamaboko,True,1,0.6817307692307693
+ramen,frame_00065,plate,True,1,0.73947845974097
+ramen,frame_00065,corn,True,0,0.03509846262932285
+ramen,frame_00065,onion segments,True,0,0.004513721714010592
+ramen,frame_00081,bowl,True,1,0.5082576076460247
+ramen,frame_00081,chopsticks,True,1,0.7819383259911894
+ramen,frame_00081,sake cup,True,0,0.0
+ramen,frame_00081,nori,True,1,0.7120053767957658
+ramen,frame_00081,egg,True,1,0.8593976485746497
+ramen,frame_00081,wavy noodles,True,1,0.8844349680170576
+ramen,frame_00081,glass of water,True,0,0.2518538348280016
+ramen,frame_00081,kamaboko,True,1,0.5724015398282499
+ramen,frame_00081,spoon,True,1,0.2791123937290383
+ramen,frame_00081,napkin,True,0,0.0
+ramen,frame_00081,plate,True,1,0.08314223555006763
+ramen,frame_00081,onion segments,True,0,0.0008043689936920536
+ramen,frame_00119,nori,True,1,0.6898196341696586
+ramen,frame_00119,egg,True,1,0.8992882377389859
+ramen,frame_00119,sake cup,True,0,0.0
+ramen,frame_00119,chopsticks,True,1,0.8153161864242893
+ramen,frame_00119,wavy noodles,True,1,0.8590977589810899
+ramen,frame_00119,kamaboko,True,1,0.7823899371069183
+ramen,frame_00119,corn,True,0,0.015070882339788023
+ramen,frame_00119,onion segments,True,0,0.00012791942422793896
+ramen,frame_00128,glass of water,True,0,0.405457077442349
+ramen,frame_00128,nori,True,1,0.6916558300823581
+ramen,frame_00128,egg,True,1,0.882739420935412
+ramen,frame_00128,sake cup,True,0,0.0
+ramen,frame_00128,bowl,True,1,0.40451950273465925
+ramen,frame_00128,chopsticks,True,1,0.8686620715702011
+ramen,frame_00128,wavy noodles,True,1,0.8780353200883002
+ramen,frame_00128,spoon,True,1,0.24606757820659073
+ramen,frame_00128,corn,True,0,0.029283401379698717
+ramen,frame_00128,onion segments,True,0,0.0007846153846153846
+ramen,frame_00128,hand,True,0,0.0
+ramen,frame_00128,plate,True,1,0.03687746341774778
+ramen,frame_00128,kamaboko,True,1,0.6987430733882957
+ramen,frame_00128,napkin,True,0,0.0
+waldo_kitchen,frame_00053,knife,True,1,0.6552554360093297
+waldo_kitchen,frame_00053,yellow desk,True,1,0.27385409288677526
+waldo_kitchen,frame_00053,toaster,True,0,0.0
+waldo_kitchen,frame_00053,Stainless steel pots,True,1,0.4524305936574125
+waldo_kitchen,frame_00053,pour-over vessel,True,0,0.0
+waldo_kitchen,frame_00053,ottolenghi,True,1,0.19704666272888363
+waldo_kitchen,frame_00066,plastic ladle,True,0,0.0
+waldo_kitchen,frame_00066,refrigerator,True,1,0.727256545076131
+waldo_kitchen,frame_00066,pot,True,0,0.0
+waldo_kitchen,frame_00066,spatula,True,0,0.0
+waldo_kitchen,frame_00089,knife,True,1,0.03015075376884422
+waldo_kitchen,frame_00089,ketchup,True,0,0.0
+waldo_kitchen,frame_00089,cabinet,True,0,0.0
+waldo_kitchen,frame_00140,plate,True,0,0.0
+waldo_kitchen,frame_00140,dark cup,True,1,0.7109740197793112
+waldo_kitchen,frame_00140,frog cup,True,1,0.4652222664303541
+waldo_kitchen,frame_00140,spoon,True,0,0.014923369075249842
+waldo_kitchen,frame_00140,sink,True,1,0.30089954233810867
+waldo_kitchen,frame_00154,plate,True,1,0.6474703389162872
+waldo_kitchen,frame_00154,knife,True,0,0.0
+waldo_kitchen,frame_00154,red cup,True,1,0.4033132530120482
+waldo_kitchen,frame_00154,sink,True,1,0.7103214082269594

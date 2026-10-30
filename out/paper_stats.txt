@@ -1,0 +1,51 @@
+== LERF-OVS good view, ours vs baselines (exact McNemar)
+all 67           ours 20 vs refview 14: discordant (10, 4, 0.1795654296875)
+all 67           ours 20 vs clip 6: discordant (18, 4, 0.004343509674072266)
+all 67           ours 20 vs capframe 8: discordant (16, 4, 0.01181793212890625)
+right object 29  ours 18 vs refview 12: discordant (9, 3, 0.14599609375)
+right object 29  ours 18 vs clip 2: discordant (16, 0, 3.0517578125e-05)
+right object 29  ours 18 vs capframe 4: discordant (15, 1, 0.000518798828125)
+== centring threshold sweep (good view with centre <= t x diagonal), ours vs B1, all 67
+t=0.10: ours 18, B1 6
+t=0.15: ours 20, B1 14
+t=0.20: ours 20, B1 22
+t=0.25: ours 20, B1 23
+== median centre offset (fraction of diagonal) on the right-object subset
+refview: 0.160
+ours: 0.039
+== LERF-OVS servo, per-image success, ours vs baselines (Wilcoxon); failed images count as 0
+alpha 0.1: ours vs refview: (84.57711442786069, 70.14925373134328, 35, 9, 0.0010448261983578757)
+alpha 0.2: ours vs refview: (75.62189054726367, 70.64676616915423, 24, 18, 0.24702176038568768)
+alpha 0.1: ours vs refview_render: (84.57711442786069, 69.65174129353233, 37, 9, 0.0006671465402706329)
+alpha 0.2: ours vs refview_render: (75.62189054726367, 70.1492537313433, 24, 19, 0.18197583276565688)
+alpha 0.1: ours vs clip: (84.57711442786069, 58.70646766169154, 36, 11, 2.458042854419458e-05)
+alpha 0.2: ours vs clip: (75.62189054726367, 55.72139303482587, 31, 17, 0.006210269791965758)
+alpha 0.1: ours vs capframe: (84.57711442786069, 59.70149253731344, 36, 6, 2.8373305271267247e-05)
+alpha 0.1: ours vs capframe on its 61 views: (85.24590163934428, 65.57377049180327, 30, 6, 0.0003556585300781831)
+alpha 0.2: ours vs capframe: (75.62189054726367, 54.228855721393046, 34, 15, 0.0004674215145017257)
+alpha 0.2: ours vs capframe on its 61 views: (75.95628415300547, 59.56284153005464, 28, 15, 0.004184295449718376)
+== same vs other model (ours)
+alpha 0.1: same vs cross: (84.57711442786069, 74.6268656716418, 13, 5, 0.01764855843811584)
+alpha 0.2: same vs cross: (75.62189054726367, 66.66666666666666, 18, 8, 0.025840731564826885)
+== Mip-NeRF 360: 4x supersampled vs 320 px (same runs)
+both offsets: (58.974358974358964, 48.71794871794871, 12, 2, 0.0052505824543437486)
+== median d* per method (LERF-OVS same-model servo)
+lerf_ovs_same: 0.43
+baseline_refview_same: 0.88
+baseline_clip_same: 1.42
+baseline_capframe_same: 0.88
+== InteriorGS (per query; missing desired images fail)
+good view all 93: ours 24 vs refview 17: (16, 9, 0.2295229434967041)
+good view all 93: ours 24 vs clip 5: (22, 3, 0.00015652179718017578)
+servo all 93 alpha 0.1: ours vs refview: (64.87455197132616, 61.648745519713266, 37, 29, 0.19697129788422885)
+servo all 93 alpha 0.2: ours vs refview: (34.05017921146953, 20.78853046594982, 34, 19, 0.018165348226152397)
+servo all 93 alpha 0.1: ours vs clip: (64.87455197132616, 63.799283154121866, 32, 33, 0.9396811768448579)
+servo all 93 alpha 0.2: ours vs clip: (34.05017921146953, 34.40860215053764, 27, 27, 0.906858366524958)
+good view grounded 32: ours 22 vs refview 12: (15, 5, 0.04138946533203125)
+good view grounded 32: ours 22 vs clip 2: (21, 1, 1.0967254638671875e-05)
+servo grounded 32 alpha 0.1: ours vs refview: (67.70833333333334, 66.66666666666666, 11, 9, 0.5592050363968919)
+servo grounded 32 alpha 0.2: ours vs refview: (45.83333333333333, 16.666666666666664, 16, 4, 0.003023063773236309)
+servo grounded 32 alpha 0.1: ours vs clip: (67.70833333333334, 65.625, 12, 11, 0.8781310353215197)
+servo grounded 32 alpha 0.2: ours vs clip: (45.83333333333333, 41.666666666666664, 11, 8, 0.6852849044880956)
+== InteriorGS median d* per method
+{'clip': 0.75, 'ours': 1.57, 'refview': 2.99}
