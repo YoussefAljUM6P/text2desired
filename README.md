@@ -101,6 +101,44 @@ and intrinsics (`goal.npz`) and a `summary.json` of every stage.
 Videos and figures: `make_videos.py`, `goal_dashboard.py`, `interiorgs_dashboard.py`, `make_gallery.py`,
 `paper_figures.py`, `pipeline_figure.py`.
 
+## Running baseline B3 (CapFrame)
+
+CapFrame ([Li et al., ECCV 2026](https://github.com/jirongli/CapFrame)) is not included: its repository has no license.
+Its results are in `out/` (method `capframe` in `benchmark/lerf_ovs_goals.csv`, `servo_eval/*capframe*.csv`), so the
+tables do not need it. To rerun it, we used the authors' code unmodified at commit `7ce49ea`, in its own environment:
+
+```
+git clone https://github.com/jirongli/CapFrame.git && cd CapFrame && git checkout 7ce49ea
+conda create -n capframe python=3.11 -y && conda activate capframe
+pip install -r requirements.txt bitsandbytes          # bitsandbytes: 4-bit Qwen3-VL (we used 0.50.2)
+cd CameraGS && pip install submodules/diff-gaussian-rasterization submodules/simple-knn && cd ..
+```
+
+Download [FG-CLIP-Base](https://huggingface.co/qihoo360/fg-clip-base); Qwen3-VL-32B-Instruct, Grounded SAM and Orient
+Anything are downloaded on first use. Set `ORIENT_CACHE` at the top of `scripts/capframe_batch.py` to a writable folder.
+
+`scripts/capframe_batch.py` runs CapFrame's pipeline on our queries with three changes only: Qwen3-VL in 4-bit NF4 with
+an MLLM image batch of 2 (the bf16 model needs ~66 GB; this fits in 24 GB), the models loaded once per scene, and the
+instruction "A view of the <query>, in the center of the frame.". It runs from the CapFrame folder in two processes
+(MLLM stages, then segmentation, orientation and pose optimisation):
+
+```
+cd CapFrame
+for phase in mllm optim; do
+  python <this repo>/scripts/capframe_batch.py -m <3DGS model> -s <images> --model_root <fg-clip-base> --batch_size 2 \
+      --queries <this repo>/out/lerf_ovs_queries_teatime.txt --out <this repo>/out/capframe/teatime --phase $phase
+done
+```
+
+- LERF-OVS: `-m` is LangSplat-V2's RGB Gaussians of the scene (Inria format, `cameras.json` + `point_cloud/`).
+  `cameras.json` names images without extension, so `-s` is a folder of links without extension:
+  `for f in <scene>/images/*; do ln -s "$f" "<images>/$(basename "${f%.*}")"; done`.
+- Mip-NeRF 360: `scripts/capframe_export_mip.py` writes our gsplat models and the image links in the format CapFrame
+  reads, so that CapFrame renders the same reconstruction as our method; then `scripts/capframe_mip_runs.py`.
+
+`scripts/goal_benchmark.py` then converts CapFrame's poses (`capframe.npz`) to our frame and scores them;
+`scripts/run_capframe.sh` and `scripts/run_capframe_mip.sh` chain all the steps with the paper's paths.
+
 ## Data and external code
 
 Data: [LERF-OVS](https://github.com/minghanqin/LangSplat) (scenes and labels), [Mip-NeRF 360](https://jonbarron.info/mipnerf360/),
@@ -109,8 +147,7 @@ of each script and in the `run_*.sh` files; change them to your own locations.
 
 The training cameras are read with gsplat's COLMAP parser (`third_party/gs_vs`, Apache 2.0), so that the world
 normalisation matches gsplat training. The InteriorGS survey (`interiorgs_survey.py`) runs in a separate
-[Habitat-GS](https://github.com/facebookresearch/habitat-sim) environment. CapFrame (baseline B3) is the authors' code,
-run in its own environment with a 4-bit model (`capframe_batch.py`).
+[Habitat-GS](https://github.com/facebookresearch/habitat-sim) environment. CapFrame (baseline B3): see above.
 
 ## License
 
