@@ -52,7 +52,7 @@ def main():
     ap.add_argument("--model", required=True, help="gsplat checkpoint (.pt) or 3DGS .ply")
     ap.add_argument("--cfg", required=True, help="gsplat cfg.yml of the COLMAP scene (cameras)")
     ap.add_argument("--images", required=True, help="training images scanned by the detector")
-    ap.add_argument("--gs_vs_dir", default="/home/youssef/Documents/SW/visual_navigation/vanilla_gs_vs")
+    ap.add_argument("--gs_vs_dir", default=str(Path(__file__).resolve().parents[1] / "third_party"))
     ap.add_argument("--sam_ckpt", default="/home/youssef/Documents/SW/checkpoints/sam_vit_h_4b8939.pth")
     ap.add_argument("--gd_model", default="IDEA-Research/grounding-dino-tiny")
     ap.add_argument("--gd_threshold", type=float, default=0.2)

@@ -1,14 +1,19 @@
-# PyTorch 2.1 with CUDA 11.8 (install from https://pytorch.org first)
-torch==2.1.2
-torchvision==0.16.2
-gsplat==1.5.3
+# Install torch 2.1.2 (CUDA 11.8) and gsplat 1.5.3 first, see README
 transformers==4.51.3
-segment-anything @ git+https://github.com/facebookresearch/segment-anything.git
+segment-anything @ git+https://github.com/facebookresearch/segment-anything.git@dca509fe793f601edb92606367a655c15ac00fdf
+setuptools<70           # torch 2.1 imports pkg_resources
 numpy==1.26.4
 scipy==1.15.3
 pandas==2.3.3
+open3d==0.19.0
 opencv-python==4.10.0.84
 pillow
 pyyaml
 matplotlib
 imageio
+imageio-ffmpeg
+tqdm
+typing_extensions
+piexif
+# COLMAP reader of the gsplat parser (third_party/gs_vs): not the PyPI pycolmap
+pycolmap @ git+https://github.com/rmbrualla/pycolmap@cc7ea4b7301720ac29287dbe450952511b32125e

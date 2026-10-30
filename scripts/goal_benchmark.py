@@ -45,7 +45,7 @@ from text2goal.render import GaussianScene  # noqa: E402
 from text2goal.viewpoint import ViewParams  # noqa: E402
 
 L = "/media/youssef/DATA/lerf_ovs/lerf_ovs"
-GS_VS = "/home/youssef/Documents/SW/visual_navigation/vanilla_gs_vs"
+GS_VS = str(ROOT / "third_party")         # gsplat COLMAP parser (gs_vs.datasets.colmap)
 SCENES = ["figurines", "teatime", "ramen", "waldo_kitchen"]
 OUT = ROOT / "out"
 YAWS, PITCHES = [-30, -15, 0, 15, 30], [-15, 0, 15]

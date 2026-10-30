@@ -47,7 +47,7 @@ def main():
     ap.add_argument("--render_ply", default=None, help="other model, raw COLMAP frame (needs --cfg)")
     ap.add_argument("--render_model", default=None, help="other model already in our frame")
     ap.add_argument("--cfg", default=None, help="gsplat cfg.yml of --model (COLMAP -> our frame)")
-    ap.add_argument("--gs_vs_dir", default="/home/youssef/Documents/SW/visual_navigation/vanilla_gs_vs")
+    ap.add_argument("--gs_vs_dir", default=str(Path(__file__).resolve().parents[1] / "third_party"))
     ap.add_argument("--width", type=int, default=320, help="servo image width")
     ap.add_argument("--levels", default="0.1,5;0.2,10", help="perturbations 'alpha,beta_deg;...'")
     ap.add_argument("--supersample", type=int, default=1, help="render the current view k times larger and area-"

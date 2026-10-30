@@ -26,7 +26,7 @@ from text2goal.geometry import project, up_from_cameras  # noqa: E402
 from text2goal.render import GaussianScene  # noqa: E402
 from text2goal.viewpoint import ViewParams, projected_fill, select_view  # noqa: E402
 
-GS_VS = "/home/youssef/Documents/SW/visual_navigation/vanilla_gs_vs"
+GS_VS = str(ROOT / "third_party")         # gsplat COLMAP parser (gs_vs.datasets.colmap)
 D = "/media/youssef/LaCie/data/mip-nerf360/360_v2"
 L = "/media/youssef/DATA/lerf_ovs/lerf_ovs"
 DATASETS = {

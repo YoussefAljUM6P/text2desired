@@ -27,6 +27,35 @@ text query ──► stage 1: localize ──► stage 2: select view ──► 
 
 Per-run outputs (desired images, goal poses, servo trajectories; several GB) are not included.
 
+## Installation
+
+Tested on Ubuntu with an NVIDIA GPU (24 GB) and a driver for CUDA 11.8 or newer.
+
+```
+git clone https://github.com/YoussefAljUM6P/text2desired.git
+cd text2desired
+conda create -n text2desired python=3.10 -y
+conda activate text2desired
+pip install torch==2.1.2 torchvision==0.16.2 --index-url https://download.pytorch.org/whl/cu118
+pip install "gsplat==1.5.3+pt21cu118" --extra-index-url https://docs.gsplat.studio/whl/pt21cu118
+pip install -r requirements.txt
+```
+
+SAM ViT-H checkpoint (Grounding DINO and CLIP are downloaded from Hugging Face on first use):
+
+```
+mkdir -p checkpoints
+wget -P checkpoints https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
+```
+
+Check:
+
+```
+python -c "import torch, gsplat; print(torch.cuda.is_available(), gsplat.__version__)"   # True 1.5.3+pt21cu118
+```
+
+All commands below run from the repository root in this environment.
+
 ## Reproducing the tables and statistics
 
 Every number of the paper and the supplementary material comes from the csv files in `out/`:
@@ -42,8 +71,13 @@ PYTHONPATH=scripts:. python scripts/servo_vs_criteria.py # servo success vs desi
 ```
 PYTHONPATH=scripts:. python scripts/text_to_desired_image.py --query "piano" \
     --model <gsplat checkpoint .pt or 3DGS .ply> --cfg <gsplat cfg.yml> --images <scene>/images \
-    --gs_vs_dir <vanilla_gs_vs> --sam_ckpt <sam_vit_h_4b8939.pth> --out <output dir>
+    --sam_ckpt checkpoints/sam_vit_h_4b8939.pth --out out/piano
 ```
+
+`--cfg` is the `cfg.yml` written by gsplat's `simple_trainer.py` (its `data_dir`, `data_factor` and
+`normalize_world_space` are read). The models of the paper are trained with gsplat 1.5.3 (MCMC, data factor 1, 30k
+iterations; `scripts/train_lerf.sh`). The output directory holds the desired image (`desired_image.png`), the goal pose
+and intrinsics (`goal.npz`) and a `summary.json` of every stage.
 
 ## Evaluations
 
@@ -63,21 +97,18 @@ PYTHONPATH=scripts:. python scripts/text_to_desired_image.py --query "piano" \
 Videos and figures: `make_videos.py`, `goal_dashboard.py`, `interiorgs_dashboard.py`, `make_gallery.py`,
 `paper_figures.py`, `pipeline_figure.py`.
 
-## Dependencies
-
-Python 3.10 with PyTorch 2.1 (CUDA 11.8), [gsplat](https://github.com/nerfstudio-project/gsplat) 1.5.3,
-`transformers` 4.51 (Grounding DINO, CLIP), [segment-anything](https://github.com/facebookresearch/segment-anything)
-(ViT-H checkpoint), numpy, scipy, pandas, opencv-python, Pillow, PyYAML, matplotlib, imageio; see `requirements.txt`.
-COLMAP cameras are read with the parser of [vanilla_gs_vs](https://github.com/ROVISLabStar/vanilla_gs_vs)
-(`--gs_vs_dir`), so that the world normalisation matches gsplat training. The InteriorGS survey
-(`interiorgs_survey.py`) runs in a separate [Habitat-GS](https://github.com/facebookresearch/habitat-sim) environment.
-CapFrame (baseline B3) is the authors' code, run with a 4-bit model (`capframe_batch.py`).
+## Data and external code
 
 Data: [LERF-OVS](https://github.com/minghanqin/LangSplat) (scenes and labels), [Mip-NeRF 360](https://jonbarron.info/mipnerf360/),
 InteriorGS validation houses with their ObjectNav episodes. The dataset, checkpoint and model paths are set at the top
 of each script and in the `run_*.sh` files; change them to your own locations.
 
-## Credits
+The training cameras are read with gsplat's COLMAP parser (`third_party/gs_vs`, Apache 2.0), so that the world
+normalisation matches gsplat training. The InteriorGS survey (`interiorgs_survey.py`) runs in a separate
+[Habitat-GS](https://github.com/facebookresearch/habitat-sim) environment. CapFrame (baseline B3) is the authors' code,
+run in its own environment with a 4-bit model (`capframe_batch.py`).
 
-The core of stages 1 and 2 was extracted from Mustapha Boughdaoui's internship code; the algorithms and default
-parameters are the same.
+## License
+
+PolyForm Noncommercial 1.0.0 (`LICENSE`): free for research, teaching and other noncommercial use; contact the authors
+for commercial use. `third_party/` keeps its Apache 2.0 license.
