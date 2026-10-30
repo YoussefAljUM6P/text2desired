@@ -4,6 +4,8 @@ Code and evaluation results of the paper *From Words to Desired Images: Language
 Servoing in Gaussian Splatting Scenes* (Mustapha Boughdaoui, Youssef Alj; submitted to Machine Vision and
 Applications). Project page: https://text2desired.github.io/
 
+![Desired images generated from text queries](assets/teaser.jpg)
+
 A text query names an object in a scene reconstructed with 3D Gaussian Splatting. The pipeline grounds it (Grounding
 DINO + SAM on the training views), lifts it to 3D with the rendered depth (PCA of the object cloud), scores 74
 candidate viewpoints by visibility, render reliability, a frontality / broadside prior and whether the whole object
@@ -15,6 +17,8 @@ text query ──► stage 1: localize ──► stage 2: select view ──► 
                Grounding DINO, SAM     74 candidates, S          3DGS render                 Levenberg–Marquardt
                3DGS depth, PCA
 ```
+
+![Pipeline](assets/pipeline.png)
 
 ## Layout
 
